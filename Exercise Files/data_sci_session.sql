@@ -1,3 +1,4 @@
+-- Active: 1757188276987@@localhost@5432@postgres
 
 create schema if not exists data_sci;
 
