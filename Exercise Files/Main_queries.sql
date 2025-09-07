@@ -15,6 +15,7 @@ GROUP BY department_id
 
 SELECT department_id, SUM(salary), 
 ROUND(AVG(SALARY),2) AVG_SALARY, 
-ROUND(VAR_POP(SALARY),2) VAR_SALARY
+ROUND(VAR_POP(SALARY),2) VAR_SALARY,
+round(stddev_pop(salary),2) stddev_salary
 FROM data_sci.employees
 GROUP BY department_id
