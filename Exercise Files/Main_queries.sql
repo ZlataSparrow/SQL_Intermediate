@@ -52,7 +52,7 @@ FROM data_sci.employees
 WHERE salary > 100000
 GROUP BY department_id
 
-SELECT *
-FROM data_sci.employees
-JOIN data_sci.company_regions 
-ON company_regions.id = employees.region_id
+SELECT e.*, cr.region_name, cr.country_name
+FROM data_sci.employees e
+JOIN data_sci.company_regions cr
+ON cr.id = e.region_id
