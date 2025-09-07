@@ -69,3 +69,42 @@ FROM data_sci.employees e
 JOIN data_sci.company_regions cr
 ON cr.id = e.region_id
 WHERE cr.country_name = 'canada'
+
+SELECT e.last_name, e.email, cd.department_name
+FROM data_sci.employees e
+JOIN data_sci.company_departments cd
+ON cd.id = e.department_id
+WHERE e.salary > 120000
+
+SELECT e.id, e.salary,
+       rank() over(ORDER BY e.salary DESC) AS rank
+FROM data_sci.employees as e
+WHERE e.salary > 120000
+
+create table check1 (
+	id integer,
+    salary integer,
+    primary key (id)
+  );
+
+insert into check1 values (1, 100);
+insert into check1 values (2, 100);
+insert into check1 values (3, 50);
+
+
+select * from check1;
+
+SELECT 
+  MAX(CASE WHEN salary_rank = 2 THEN salary ELSE NULL END) AS SecondHighestSalary,
+FROM (
+  SELECT 
+    salary,
+    RANK() OVER (ORDER BY salary DESC) AS salary_rank
+  FROM check1
+) ranked;
+
+
+SELECT 
+    salary,
+    RANK() OVER (ORDER BY salary DESC) AS salary_rank
+  FROM check1
