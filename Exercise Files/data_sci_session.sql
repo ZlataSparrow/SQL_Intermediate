@@ -71,8 +71,7 @@ create index idx_emp_depatment on employees(department_id);
 create index idx_emp_region on employees(region_id);
 
 
-insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (1,'kelley','rkelley0@soundcloud.com','19-sep-2015',67470,'structural engineer',2,6);
-insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (1003,'carr','fcarr2@woothemes.com','20-sep-2018',101768,'recruiting manager',3,1);
+insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (1,'kelley','rkelley0@soundcloud.com','19-sep-2015',67470,'structural engineer',2,6);insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (1003,'carr','fcarr2@woothemes.com','20-sep-2018',101768,'recruiting manager',3,1);
 insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (22,'alexander','kalexanderl@marketwatch.com','20-oct-2021',144724,'marketing assistant',2,1);
 insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (45,'nguyen','mnguyen18@biblegateway.com','21-jun-2021',108378,'electrical engineer',7,1);
 insert into employees(id, last_name, email, start_date, salary, job_title, region_id, department_id) values (50,'armstrong','parmstrong1d@hc360.com','13-sep-2017',89969,'senior editor',4,1);
