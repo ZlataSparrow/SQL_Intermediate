@@ -1,7 +1,6 @@
 SELECT count(*), min(salary) , max(salary)
 FROM data_sci.employees
 
-
 SELECT count(*), min(id) , max(id)
 FROM data_sci.employees
 
@@ -22,8 +21,34 @@ GROUP BY department_id
 
 SELECT last_name, department_id
 FROM data_sci.employees
-where last_name = 'boyd'
+WHERE last_name = 'boyd'
 
 SELECT last_name, department_id
 FROM data_sci.employees
-where last_name like 'b%'
+WHERE last_name LIKE 'b%'
+
+SELECT last_name, department_id
+FROM data_sci.employees
+WHERE last_name LIKE 'b%d'
+
+SELECT last_name, department_id
+FROM data_sci.employees
+where last_name LIKE 'bo%'
+
+SELECT last_name, department_id
+FROM data_sci.employees
+WHERE last_name LIKE 'b%' AND salary > 100000
+
+SELECT last_name, department_id
+FROM data_sci.employees
+where last_name LIKE 'b%' OR salary > 100000
+
+SELECT sum(salary)
+FROM data_sci.employees
+WHERE salary > 100000
+
+SELECT department_id, sum(salary)
+FROM data_sci.employees
+WHERE salary > 100000
+GROUP BY department_id
+
