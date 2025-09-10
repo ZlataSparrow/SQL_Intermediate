@@ -110,8 +110,30 @@ WHERE id in (1,2,3);
 select * from check1;
 select * from check2;
 
+-- Write your PostgreSQL query statement below
+select d.name as Department, e.name as Employee, e.salary as Salary
+from check1 e
+join check2 d
+on e.departmentId=d.id
+where Salary in (select max(salary) 
+from check1 e
+group by e.departmentId
+)
 
 
+select e.name as Employee, e.salary as Salary
+from check1 e
+where (e.salary, e.name) in (
+  select max(e.salary), e.name
+  from check1 e
+  group by e.departmentId
+)
+
+
+
+select max(e.salary) 
+from check1 e
+group by e.departmentId;
 
 
 SELECT 
