@@ -29,12 +29,12 @@ FROM(
 GROUP BY w.request_at
 
 
-SELECT t.request_at, t.id
+SELECT t.request_at, t.id, u.banned
     FROM Trips t
     JOIN Users u
     ON t.client_id = u.users_id OR t.driver_id=u.users_id
     WHERE u.banned = 'No'
-    GROUP BY t.request_at, t.id
+    GROUP BY t.request_at, t.id, u.banned
 
 select t.request_at, count(*) as Number_cancelled 
 from Trips t
