@@ -91,21 +91,132 @@ create table check1 (
 
  create table check1 (
   id integer,
-  recordDate DATE,
-  temperature integer
+  num integer
   ); 
 
 DROP TABLE check1;
+INSERT INTO check1 (id, num) VALUES (1, 1);
+INSERT INTO check1 (id, num) VALUES (2, 1);
+INSERT INTO check1 (id, num) VALUES (3, 1);
+INSERT INTO check1 (id, num) VALUES (4, 2);
+INSERT INTO check1 (id, num) VALUES (5, 1);
+INSERT INTO check1 (id, num) VALUES (6, 2);
+INSERT INTO check1 (id, num) VALUES (7, 2);
+
 
 insert into check1 values (1, '2015-12-14','3');
 delete from check1 where id = 1;
 insert into check1 values (2, '2015-12-16','5');
 delete from check1 where id = 2;
-insert into check1 values (1, '2015-01-01','10');
-insert into check1 values (2, '2015-01-02','25');
-insert into check1 values (3, '2015-01-03','20');
-insert into check1 values (4, '2015-01-04','30');
+insert into check1 values (1, '100');
+insert into check1 values (2, '100');
+insert into check1 values (2, '200');
+insert into check1 values (3, '300');
+insert into check1 values (4, '30');
 delete from check1 where id = 4;
+
+
+INSERT INTO check1 (id, salary) VALUES (12, 761);
+INSERT INTO check1 (id, salary) VALUES (6, 1037);
+INSERT INTO check1 (id, salary) VALUES (87, 38);
+INSERT INTO check1 (id, salary) VALUES (1, 786);
+INSERT INTO check1 (id, salary) VALUES (39, 1762);
+INSERT INTO check1 (id, salary) VALUES (65, 133);
+INSERT INTO check1 (id, salary) VALUES (25, 2529);
+INSERT INTO check1 (id, salary) VALUES (96, 403);
+INSERT INTO check1 (id, salary) VALUES (8, 4333);
+INSERT INTO check1 (id, salary) VALUES (11, 3164);
+INSERT INTO check1 (id, salary) VALUES (5, 831);
+INSERT INTO check1 (id, salary) VALUES (18, 3579);
+INSERT INTO check1 (id, salary) VALUES (66, 4778);
+INSERT INTO check1 (id, salary) VALUES (26, 4826);
+INSERT INTO check1 (id, salary) VALUES (82, 4957);
+INSERT INTO check1 (id, salary) VALUES (63, 1288);
+INSERT INTO check1 (id, salary) VALUES (64, 2711);
+INSERT INTO check1 (id, salary) VALUES (73, 1842);
+INSERT INTO check1 (id, salary) VALUES (2, 2627);
+INSERT INTO check1 (id, salary) VALUES (78, 1908);
+INSERT INTO check1 (id, salary) VALUES (22, 4667);
+INSERT INTO check1 (id, salary) VALUES (77, 199);
+INSERT INTO check1 (id, salary) VALUES (69, 576);
+INSERT INTO check1 (id, salary) VALUES (32, 2638);
+INSERT INTO check1 (id, salary) VALUES (79, 510);
+INSERT INTO check1 (id, salary) VALUES (23, 622);
+INSERT INTO check1 (id, salary) VALUES (43, 2491);
+INSERT INTO check1 (id, salary) VALUES (44, 4435);
+INSERT INTO check1 (id, salary) VALUES (28, 4552);
+INSERT INTO check1 (id, salary) VALUES (86, 4646);
+INSERT INTO check1 (id, salary) VALUES (57, 451);
+INSERT INTO check1 (id, salary) VALUES (13, 1852);
+INSERT INTO check1 (id, salary) VALUES (62, 2835);
+INSERT INTO check1 (id, salary) VALUES (72, 544);
+INSERT INTO check1 (id, salary) VALUES (37, 2896);
+INSERT INTO check1 (id, salary) VALUES (89, 4699);
+INSERT INTO check1 (id, salary) VALUES (71, 220);
+INSERT INTO check1 (id, salary) VALUES (46, 2333);
+INSERT INTO check1 (id, salary) VALUES (95, 2261);
+INSERT INTO check1 (id, salary) VALUES (48, 3210);
+INSERT INTO check1 (id, salary) VALUES (17, 398);
+INSERT INTO check1 (id, salary) VALUES (20, 57);
+INSERT INTO check1 (id, salary) VALUES (74, 176);
+INSERT INTO check1 (id, salary) VALUES (54, 4272);
+INSERT INTO check1 (id, salary) VALUES (35, 2172);
+INSERT INTO check1 (id, salary) VALUES (84, 4686);
+INSERT INTO check1 (id, salary) VALUES (42, 2595);
+INSERT INTO check1 (id, salary) VALUES (76, 3631);
+INSERT INTO check1 (id, salary) VALUES (45, 4022);
+INSERT INTO check1 (id, salary) VALUES (68, 3248);
+INSERT INTO check1 (id, salary) VALUES (40, 571);
+INSERT INTO check1 (id, salary) VALUES (14, 4094);
+INSERT INTO check1 (id, salary) VALUES (51, 3272);
+INSERT INTO check1 (id, salary) VALUES (97, 2057);
+INSERT INTO check1 (id, salary) VALUES (30, 2505);
+INSERT INTO check1 (id, salary) VALUES (88, 3805);
+INSERT INTO check1 (id, salary) VALUES (55, 4926);
+INSERT INTO check1 (id, salary) VALUES (81, 3423);
+INSERT INTO check1 (id, salary) VALUES (7, 811);
+INSERT INTO check1 (id, salary) VALUES (52, 4664);
+INSERT INTO check1 (id, salary) VALUES (33, 1842);
+INSERT INTO check1 (id, salary) VALUES (41, 4645);
+INSERT INTO check1 (id, salary) VALUES (50, 1490);
+INSERT INTO check1 (id, salary) VALUES (24, 3361);
+INSERT INTO check1 (id, salary) VALUES (59, 4504);
+INSERT INTO check1 (id, salary) VALUES (99, 805);
+INSERT INTO check1 (id, salary) VALUES (67, 4561);
+INSERT INTO check1 (id, salary) VALUES (61, 4641);
+INSERT INTO check1 (id, salary) VALUES (38, 2542);
+INSERT INTO check1 (id, salary) VALUES (94, 4361);
+INSERT INTO check1 (id, salary) VALUES (15, 1652);
+INSERT INTO check1 (id, salary) VALUES (70, 1903);
+INSERT INTO check1 (id, salary) VALUES (10, 2109);
+INSERT INTO check1 (id, salary) VALUES (49, 1428);
+INSERT INTO check1 (id, salary) VALUES (29, 558);
+INSERT INTO check1 (id, salary) VALUES (60, 708);
+INSERT INTO check1 (id, salary) VALUES (3, 1717);
+INSERT INTO check1 (id, salary) VALUES (0, 3162);
+INSERT INTO check1 (id, salary) VALUES (75, 1450);
+INSERT INTO check1 (id, salary) VALUES (83, 2333);
+INSERT INTO check1 (id, salary) VALUES (47, 455);
+INSERT INTO check1 (id, salary) VALUES (9, 2360);
+INSERT INTO check1 (id, salary) VALUES (56, 1570);
+INSERT INTO check1 (id, salary) VALUES (80, 1677);
+INSERT INTO check1 (id, salary) VALUES (27, 508);
+INSERT INTO check1 (id, salary) VALUES (21, 3994);
+INSERT INTO check1 (id, salary) VALUES (85, 2276);
+INSERT INTO check1 (id, salary) VALUES (91, 1606);
+INSERT INTO check1 (id, salary) VALUES (90, 2269);
+INSERT INTO check1 (id, salary) VALUES (58, 1954);
+INSERT INTO check1 (id, salary) VALUES (19, 774);
+INSERT INTO check1 (id, salary) VALUES (4, 655);
+INSERT INTO check1 (id, salary) VALUES (92, 3274);
+INSERT INTO check1 (id, salary) VALUES (16, 333);
+INSERT INTO check1 (id, salary) VALUES (36, 1744);
+INSERT INTO check1 (id, salary) VALUES (53, 2262);
+INSERT INTO check1 (id, salary) VALUES (93, 3887);
+INSERT INTO check1 (id, salary) VALUES (31, 3521);
+INSERT INTO check1 (id, salary) VALUES (34, 1415);
+INSERT INTO check1 (id, salary) VALUES (98, 2490);
+
 
 insert into check1 values (5, '2015-01-05','max@example.com');
 insert into check1 values (6, '2015-01-06','max@example.com');
