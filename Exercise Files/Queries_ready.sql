@@ -36,5 +36,35 @@ WHERE ranked.s_rank = n
 LIMIT 1;
 END;
 $$ LANGUAGE plpgsql;
-
 SELECT * FROM NthHighestSalary(88);
+
+
+/* 180. Consecutive Numbers */
+SELECT distinct(num) as ConsecutiveNums 
+FROM (
+    SELECT 
+        num,
+        id,
+        LAG(num, 1) OVER (ORDER BY id) AS p_1,
+        LAG(num, 2) OVER (ORDER BY id) AS p_2
+    FROM Logs
+) sub
+WHERE num = p_1 AND num = p_2;
+
+
+
+/*184 Leetcode Department Highest Salary*/
+select 
+d.name as DEPARTMENT,
+e.name as EMPLOYEE, 
+e.salary
+from (
+select *,
+dense_rank() over (
+    PARTITION by departmentid
+    order by salary desc) as rank 
+from employee) e
+JOIN Department d
+on e.departmentId=d.id
+where rank = 1
+order by d.name

@@ -222,6 +222,44 @@ insert into check1 values (5, '2015-01-05','max@example.com');
 insert into check1 values (6, '2015-01-06','max@example.com');
 delete from check1 where id=6;
 
+
+CREATE TABLE Trips (
+  id INTEGER PRIMARY KEY,
+  client_id INTEGER,
+  driver_id INTEGER,
+  city_id INTEGER,
+  status VARCHAR(30),
+  request_at DATE
+);
+
+INSERT INTO Trips (id, client_id, driver_id, city_id, status, request_at) VALUES
+(1, 1, 10, 1, 'completed', '2013-10-01'),
+(2, 2, 11, 1, 'cancelled_by_driver', '2013-10-01'),
+(3, 3, 12, 6, 'completed', '2013-10-01'),
+(4, 4, 13, 6, 'cancelled_by_client', '2013-10-01'),
+(5, 1, 10, 1, 'completed', '2013-10-02'),
+(6, 2, 11, 6, 'completed', '2013-10-02'),
+(7, 3, 12, 6, 'completed', '2013-10-02'),
+(8, 2, 12, 12, 'completed', '2013-10-03'),
+(9, 3, 10, 12, 'completed', '2013-10-03'),
+(10, 4, 13, 12, 'cancelled_by_driver', '2013-10-03');
+
+
+CREATE TABLE Users (
+  users_id INTEGER PRIMARY KEY,
+  banned VARCHAR(10),
+  role VARCHAR(10)
+);
+
+INSERT INTO Users (users_id, banned, role) VALUES (1, 'No', 'client');
+INSERT INTO Users (users_id, banned, role) VALUES (2, 'Yes', 'client');
+INSERT INTO Users (users_id, banned, role) VALUES (3, 'No', 'client');
+INSERT INTO Users (users_id, banned, role) VALUES (4, 'No', 'client');
+INSERT INTO Users (users_id, banned, role) VALUES (10, 'No', 'driver');
+INSERT INTO Users (users_id, banned, role) VALUES (11, 'No', 'driver');
+INSERT INTO Users (users_id, banned, role) VALUES (12, 'No', 'driver');
+INSERT INTO Users (users_id, banned, role) VALUES (13, 'No', 'driver');
+
 insert into check2 values (1, 'IT');
 insert into check2 values (2, 'HR');
 
