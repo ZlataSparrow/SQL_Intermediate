@@ -3,13 +3,7 @@ select * from check1
 
 
 
-/* LeetCode 183: Duplicate Emails */
-select id, temperature, recorddate,
-recorddate+1 as qw,
-((ROW_NUMBER() OVER (ORDER BY id) - 1) / 2) + 1 AS pair_number
-from check1
 
-select id, temporature,
 
 select id, temperature, recorddate,
  lead(recorddate) over (partition by pair_number order by id) as next_recorddate
@@ -43,30 +37,34 @@ FROM (
 ) sub
 WHERE result IS NOT NULL;
 
-SELECT
-    id,
-    recorddate,
-    recorddate - 1 as yest,
-    temperature,
-    LAG(temperature) OVER (ORDER BY recordDate) AS prev_temp,
+
+
+
+select id 
+from(
+select 
+t.id, t.recorddate as tod, t.cur_temp, t.prev_temp,
     CASE 
-      WHEN temperature - LAG(temperature) OVER (ORDER BY recordDate) > 1 THEN id
+      WHEN t.cur_temp - t.prev_temp > 1 THEN t.id
       ELSE NULL
     END AS result
-  FROM check1  
-
-
-select 
-id,
 from 
 (SELECT
     id,
     recorddate,
+    temperature as cur_temp,
     recorddate - 1 as yest,
-    temperature
+    LAG(temperature) OVER (ORDER BY (recorddate - 1)) AS prev_temp
   FROM check1) t
+  left JOIN check1 c ON t.yest = c.recorddate) s
+where s.result is not null
 
-
+SELECT w1.id, w1.recorddate as today, w1.temperature as cur_temp,
+       w2.temperature as prev_temp
+FROM check1 w1
+JOIN check1 w2 
+ON w1.recorddate = w2.recorddate + INTERVAL '1 month'
+where w1.temperature > w2.temperature
 
 
 
