@@ -45,6 +45,7 @@ create table company_regions (
 	);
 
 insert into company_regions values (1,'northeast', 'usa');
+
 insert into company_regions values (2,'southeast', 'usa');
 insert into company_regions values (3,'northwest', 'usa');
 insert into company_regions values (4,'southwest', 'usa');

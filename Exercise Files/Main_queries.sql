@@ -89,17 +89,27 @@ create table check1 (
   primary key (id)
   );
 
- create table check2 (
+ create table check1 (
   id integer,
-  name CHAR(50),
-  primary key (id)
+  recordDate DATE,
+  temperature integer
   ); 
 
 DROP TABLE check1;
 
-insert into check1 values (1, 'Joe', 60000, 1);
-insert into check1 values (2, 'Sam', 50000, 1);
-insert into check1 values (4, 'Max', 50000, 2);
+insert into check1 values (1, '2015-12-14','3');
+delete from check1 where id = 1;
+insert into check1 values (2, '2015-12-16','5');
+delete from check1 where id = 2;
+insert into check1 values (1, '2015-01-01','10');
+insert into check1 values (2, '2015-01-02','25');
+insert into check1 values (3, '2015-01-03','20');
+insert into check1 values (4, '2015-01-04','30');
+delete from check1 where id = 4;
+
+insert into check1 values (5, '2015-01-05','max@example.com');
+insert into check1 values (6, '2015-01-06','max@example.com');
+delete from check1 where id=6;
 
 insert into check2 values (1, 'IT');
 insert into check2 values (2, 'HR');
