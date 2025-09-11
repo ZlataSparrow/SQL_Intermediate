@@ -251,17 +251,17 @@ CREATE TABLE Users (
   role VARCHAR(10)
 );
 
-INSERT INTO Users (users_id, banned, role) VALUES (1, 'No', 'client');
-INSERT INTO Users (users_id, banned, role) VALUES (2, 'Yes', 'client');
-INSERT INTO Users (users_id, banned, role) VALUES (3, 'No', 'client');
-INSERT INTO Users (users_id, banned, role) VALUES (4, 'No', 'client');
-INSERT INTO Users (users_id, banned, role) VALUES (10, 'No', 'driver');
-INSERT INTO Users (users_id, banned, role) VALUES (11, 'No', 'driver');
-INSERT INTO Users (users_id, banned, role) VALUES (12, 'No', 'driver');
-INSERT INTO Users (users_id, banned, role) VALUES (13, 'No', 'driver');
+INSERT INTO Users (users_id, banned, role) VALUES 
+(1, 'No', 'client'),
+(2, 'Yes', 'client'),
+(3, 'No', 'client'),
+(4, 'No', 'client'),
+(10, 'No', 'driver'),
+(11, 'No', 'driver'),
+(12, 'No', 'driver'),
+(13, 'No', 'driver');
 
-insert into check2 values (1, 'IT');
-insert into check2 values (2, 'HR');
+drop table users
 
 DELETE FROM check1
 WHERE id in (1,2,3);

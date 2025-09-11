@@ -1,15 +1,7 @@
 
-select * from check1
+select * from Trips;
+select * from Users;
 
--- Write your PostgreSQL query statement below
+canc_rate = Number_cancelled/Number_requests
+
 select 
-d.name as DEPARTMENT,
-e.name as EMPLOYEE, 
-e.salary
-from Employee e
-JOIN Department d
-on e.departmentId=d.id
-where e.salary =
-(select max(salary)
-from employee
-group by departmentId)
