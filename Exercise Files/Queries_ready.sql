@@ -116,3 +116,13 @@ min(event_date) as first_played
 from Activity 
 group by player_id
 order by player_id
+
+
+/*Leetcode 512.Game Play Analysis II*/
+SELECT player_id, device_id
+FROM (
+SELECT *,
+ROW_NUMBER() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rn
+FROM Activity
+) ranked
+WHERE rn =1
