@@ -108,3 +108,11 @@ from(
 ) table_c
 group by table_c.request_at) table_2
 on table_1.request_at=table_2.request_at
+
+
+/* Leetcode 511. Game Play Analysis I */
+select player_id,
+min(event_date) as first_played
+from Activity 
+group by player_id
+order by player_id
