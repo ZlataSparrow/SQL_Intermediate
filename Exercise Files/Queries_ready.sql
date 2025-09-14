@@ -126,3 +126,34 @@ ROW_NUMBER() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rn
 FROM Activity
 ) ranked
 WHERE rn =1
+
+
+/*Leetcode 1321 Restaraunt Growth*/
+SELECT visited_on, cum_sum as amount, round(cum_sum/7,2) as average_amount
+FROM
+    (SELECT DISTINCT visited_on,
+    SUM(sum) OVER (ORDER BY visited_on ROWS BETWEEN 6 
+                        PRECEDING AND CURRENT ROW) AS cum_sum,
+    RANK() OVER (ORDER BY visited_on) AS rnk                    
+    FROM    
+        (SELECT visited_on, SUM(amount) AS sum
+        FROM Customer
+        GROUP BY visited_on
+        ORDER BY visited_on) sub 
+    ORDER BY visited_on) sub_s
+WHERE rnk > 6       
+
+
+/*Leetcode 585 Investemnt in 2016*/
+select round(CAST(sum(tiv_2016) as numeric),2) as tiv_2016
+from Insurance
+where CONCAT(lat,lon) not in 
+(SELECT CONCAT(lat,lon)
+FROM Insurance
+GROUP BY CONCAT(lat,lon)
+HAVING COUNT(*) > 1) and 
+tiv_2015 in (SELECT distinct tiv_2015
+from Insurance
+group by tiv_2015
+HAVING COUNT(*) > 1
+order by tiv_2015)
