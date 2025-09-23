@@ -157,3 +157,18 @@ from Insurance
 group by tiv_2015
 HAVING COUNT(*) > 1
 order by tiv_2015)
+
+/*Leetcode 1398 Customers Who Bought Products A&B but Not C*/
+SELECT o.customer_id, c.customer_name
+FROM
+(SELECT customer_id
+FROM(
+SELECT distinct customer_id, product_name
+FROM Orders
+ORDER by customer_id, product_name) sub
+GROUP BY customer_id
+HAVING STRING_AGG(product_name,'') LIKE 'AB%' and STRING_AGG(product_name,'') NOT LIKE '%C%'
+order by customer_id) o
+JOIN Customers c
+ON o.customer_id=c.customer_id
+
