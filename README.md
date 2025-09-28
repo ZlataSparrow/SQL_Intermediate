@@ -37,5 +37,5 @@ SQL_Intermediate_Course/
 
 ## ⚙️ Environment & Tools
 
-- **SQL:** PostgreSQL-flavored queries throughout the repo  
+- **SQL:** PostgreSQL-flavored queries throughout this repo  
 - **Setup:** GitHub Codespaces and local development using [Cursor](https://www.cursor.so/)  
