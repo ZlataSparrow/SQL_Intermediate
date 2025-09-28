@@ -1,24 +1,41 @@
-# Intermediate SQL for Data Scientists
-This is the repository for the LinkedIn Learning course Intermediate SQL for Data Scientists. The full course is available from [LinkedIn Learning][lil-course-url].
+# 📘 SQL_for_Data_Science
 
-![lil-thumbnail-url]
+This repo contains my personal SQL practice — organized by topic and structured to build solid query fluency for data analysis and data science work.
+I’m working through chapters inspired by the **LinkedIn Learning "Intermediate SQL for Data Scientists" course**, but everything here is written, tested, and organized by me.
 
-## Course Description
+---
 
-<p>Organizations are increasingly adopting digital transformation strategies that lead to greater data generation and, as a result, a greater need for data analysis. This course is designed for analysts and data scientists who work with SQL databases. Instructor Dan Sullivan outlines how to perform common data science tasks, including finding, exploring, and extracting data within relational databases. Explore the basics of using aggregates, statistical functions, window operations, regular expressions, and subqueries. Along the way, learn how to use JSON, a semistructured data type, and perform join operations to enable more complex queries.</p><p>This course is integrated with GitHub Codespaces, an instant cloud developer environment that offers all the functionality of your favorite IDE without the need for any local machine setup. With GitHub Codespaces, you can get hands-on practice from any machine, at any time—all while using a tool that you’ll likely encounter in the workplace. Check out “Using GitHub Codespaces" with this course to learn how to get started.</p>
+## 🧠 What I'm Doing Here
 
-## Instructor
+- Writing and improving **intermediate SQL queries** across a variety of use cases
+- Practicing **joins, aggregations, filtering, window functions, set operations**, and more
+- Organizing my work by chapter so it’s easy to revisit or expand
+- Adding **LeetCode-style problems** to go beyond the course and test what I’ve learned
+- Building a clean, well-commented **SQL practice portfolio** I can refer back to anytime
 
-Dan Sullivan
+---
 
-Data Architect, Author, and Instructor
+## 📁 Folder Overview
 
-                            
+```bash
+SQL_Intermediate_Course/
+│
+├── CH00/                   # Setup scripts and first queries
+│   ├── INSERT_DATA.sql
+│   └── MAIN_QUERIES.sql
+│
+├── CH02–CH08/              # My practice organized by topic/chapter
+│
+├── LeetCode_Practice/      # Extra SQL problems I’ve solved for fun and growth
+│   └── LeetCode_Queries.sql
+│
+├── Exercise_Files/         # Some raw/reference materials from the course
+│
+└── README.md
+```
+---
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/dan-sullivan?u=104).
+## ⚙️ Environment & Tools
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
-
-[lil-course-url]: https://www.linkedin.com/learning/intermediate-sql-for-data-scientists-25322592
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG4LvxcWRlOYQ/learning-public-crop_675_1200/B4EZUghCgXG0AY-/0/1740007287506?e=2147483647&v=beta&t=M8ue0_cYqF--_BbExv7im3immNCMf4V04Mvpow2fWoM
-
+- **SQL:** PostgreSQL-flavored queries throughout the repo  
+- **Setup:** GitHub Codespaces and local development using [Cursor](https://www.cursor.so/)  

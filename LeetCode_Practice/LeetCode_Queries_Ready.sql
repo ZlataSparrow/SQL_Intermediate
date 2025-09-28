@@ -7,7 +7,6 @@ ON w1.recorddate = w2.recorddate + INTERVAL '1 month'
 where w1.temperature > w2.temperature
 
 
-
 /* LeetCode 183: Duplicate Emails */
 delete from check1 
 where id NOT IN (
@@ -19,7 +18,6 @@ JOIN (
     GROUP BY email
     HAVING COUNT(*) > 0
 ) dup ON c1.email = dup.email AND c1.id = dup.min_id)
-
 
 
 /* LeetCode 177. Nth Highest Salary */
@@ -157,6 +155,7 @@ from Insurance
 group by tiv_2015
 HAVING COUNT(*) > 1
 order by tiv_2015)
+
 
 /*Leetcode 1398 Customers Who Bought Products A&B but Not C*/
 SELECT o.customer_id, c.customer_name
