@@ -11,5 +11,7 @@
             "database": "postgres",
             "password": "postgres"
         }
-    ]
+    ],
+    "sqltools.results.location": "tab",
+    "sqltools.results.reuseTab": true
 }
