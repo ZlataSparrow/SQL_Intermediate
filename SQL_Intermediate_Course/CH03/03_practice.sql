@@ -1,3 +1,3 @@
-SELECT ' Kelly'='Kelly'
+SELECT ltrim(' Kelly ')='Kelly'
 
 
