@@ -3,5 +3,5 @@ FROM data_sci.employees;
 
 
 
-SELECT MAX(salary)
+SELECT MIN(salary)
 FROM data_sci.employees;
