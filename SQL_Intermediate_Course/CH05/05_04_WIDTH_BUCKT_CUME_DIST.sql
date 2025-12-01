@@ -28,4 +28,4 @@ cume_dist() over (order by salary desc)
 from 
   data_sci.employees
 order by
-   salary desc
+   department_id
