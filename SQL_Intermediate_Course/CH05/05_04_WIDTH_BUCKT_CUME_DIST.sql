@@ -2,11 +2,9 @@
   department_id,
   last_name,
   salary,
-  width_bucket(salary,0,150000,10)
+  width_bucket(salary,0,150000,10) bucket
 from 
-  data_sci.employees
-
-
+  data_sci.employees;
 
 
 
