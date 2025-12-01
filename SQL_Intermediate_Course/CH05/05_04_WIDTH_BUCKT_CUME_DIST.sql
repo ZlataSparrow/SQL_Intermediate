@@ -17,4 +17,15 @@ select
 from 
   data_sci.employees
 order by
+   salary desc;
+
+
+select
+  department_id,
+  last_name,
+  salary,
+cume_dist() over (order by salary desc)
+from 
+  data_sci.employees
+order by
    salary desc
