@@ -1,7 +1,7 @@
 ﻿select
    department_id,
    salary,
-   avg(salary) over (partition by department_id)
+   round(avg(salary) over (partition by department_id),2) as avg_salary
 from
    data_sci.employees;
 
