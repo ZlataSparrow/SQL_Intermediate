@@ -4,7 +4,7 @@
 );*/
 
 
-INSERT INTO data_sci.api_responses (id, response)
+/*INSERT INTO data_sci.api_responses (id, response)
 VALUES (
     1,
     '{
@@ -22,7 +22,7 @@ VALUES (
             }
         }
     }'
-);
+);*/
 
 
 SELECT id, response
