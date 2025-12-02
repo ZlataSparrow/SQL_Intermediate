@@ -1,6 +1,6 @@
 
-insert into data_sci.company_regions values (8, 'london', 'uk');
-commit;
+/*insert into data_sci.company_regions values (8, 'london', 'uk');
+commit;*/
 
 
 SELECT
@@ -12,3 +12,4 @@ RIGHT OUTER JOIN
   data_sci.company_regions cr 
 on 
   e.region_id = cr.id
+
