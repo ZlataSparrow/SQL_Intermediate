@@ -1,7 +1,8 @@
-CREATE TABLE data_sci.api_responses (
+/*CREATE TABLE data_sci.api_responses (
     id INTEGER PRIMARY KEY,
     response JSON
-);
+);*/
+
 
 INSERT INTO data_sci.api_responses (id, response)
 VALUES (
@@ -27,5 +28,6 @@ VALUES (
 SELECT id, response
 FROM data_sci.api_responses
 WHERE id = 1;
+
 
 
