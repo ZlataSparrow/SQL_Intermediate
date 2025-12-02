@@ -6,4 +6,4 @@ FROM
 FULL OUTER JOIN 
   data_sci.company_regions cr 
 on 
-  e.region_id = cr.id
+  e.region_id = cr.id;
