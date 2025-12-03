@@ -1,4 +1,4 @@
-DROP TABLE data_sci.api_responses;
+/*DROP TABLE data_sci.api_responses;
 
 CREATE TABLE data_sci.api_responses (
     id INTEGER PRIMARY KEY,
@@ -24,7 +24,7 @@ VALUES (
             }
         }
     }'
-);
+);*/
 
 CREATE INDEX idx_username ON data_sci.api_responses 
 ((response->'data'->'user'->>'name'));
