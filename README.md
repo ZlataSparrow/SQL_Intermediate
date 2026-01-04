@@ -1,4 +1,4 @@
-# SQL_Intermediate. 
+# SQL_Intermediate
 
 This repo contains my personal SQL practice, organized by topic and structured to build solid query fluency for data analysis and data science work.
 I’m working through chapters inspired by the **LinkedIn Learning "Intermediate SQL for Data Scientists" course**, but everything here is written, tested, and organized by me.
